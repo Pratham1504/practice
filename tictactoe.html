@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="todo.css">
+    <title>To-Do-List</title>
+    <script>
+      
+        function fun()
+        {
+            var taskk=document.getElementById("inputt");
+            var show=document.getElementById("tasks");
+            if(taskk.value!="")
+            {
+                    
+                        let li = document.createElement("li");
+                        // li.innerText = taskk.value;
+                        
+                        show.appendChild(li);
+                         let btn=document.createElement("button")
+                        btn.textContent="delete";
+                        btn.className="delete";
+                        
+                        
+                        let input=document.createElement("input");
+                        input.value=taskk.value;
+                        input.className="inputtt";
+                        input.id="inputtt";
+                        li.appendChild(input);
+                        // li.onlclick=fun2(this);
+                        li.appendChild(btn);
+                        // li.click=fun2();
+                        taskk.value="";
+                
+                        btn.addEventListener('click',function(){
+                            show.removeChild(li);
+                            let part=document.getElementById("inputtt");
+                            if(part.value=="")
+                            {
+                                input.addEventListener('onblur',function(){
+                                    show.removeChild(li);
+                                })
+                            }
+                        });
+            }
+                
+
+        }
+        // function fun2(e)
+        // {
+        //     alert();
+        //     var show=document.getElementById("tasks");
+        //     let li=e.target.parentNode;
+        //     show.removeChild(li);
+        // }
+    </script>
+</head>
+<body>
+    <center>
+            <h1>TO-DO-LIST</h1>
+            <!-- <q>-Pratham goyal</q> -->
+            <div class="input row">
+                <input type="text" style="width: 60%; height: 30px; font-size: large;" id="inputt">
+                <button onclick="fun()" style="background-color: brown;">Add Task</button>
+            </div>
+                <br><br><br>
+                <div class="task">
+                    <h1>TASKS</h1>
+                    <ul id="tasks" >
+                        <!-- <li>
+                            <input type="text" class="form-control list_item">
+                            <button class="btn">Edit</button>
+                            <button class="btn">Delete</button>
+                        </li> -->
+                    </ul>
+                </div>
+    </center>
+</body>
+</html>

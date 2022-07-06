@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="calculator.css">
+    <title>Calculator</title>
+
+    <script>
+        
+        function dosum()
+        {
+            var firstNumber=document.getElementById("first");
+        var secondNumber=document.getElementById("second");
+        var add=document.getElementById("txtsum");
+            // alert();
+            add.value=parseFloat(firstNumber.value)+ parseFloat(secondNumber.value);
+        }
+        function dosub()
+        {
+            // alert();
+            var firstNumber=document.getElementById("first");
+        var secondNumber=document.getElementById("second");
+        var sub=document.getElementById("txtsub");
+            // alert();
+            sub.value=(firstNumber.value)- (secondNumber.value);
+        }
+        function domul()
+        {
+            var firstNumber=document.getElementById("first");
+        var secondNumber=document.getElementById("second");
+        var add=document.getElementById("txtmul");
+            // alert();
+            add.value=(firstNumber.value)* (secondNumber.value);
+        }
+        function clr()
+        {
+            var firstNumber=document.getElementById("first");
+        var secondNumber=document.getElementById("second");
+        var add=document.getElementById("txtsum");
+        var min=document.getElementById("txtsub");
+        var mult=document.getElementById("txtmul");
+            // alert();
+            min.value="";
+            mult.value="";
+            add.value="";
+            firstNumber.value="";
+            secondNumber.value="";
+        }
+
+    </script>
+</head>
+<body>
+    <h1>CALCULATOR</h1>
+    <div class="row">
+        <div class="col ">
+            <label for="exampleFormControlInput1" class="form-label">Enter 1st number</label>
+            <input type="text" class="form-control" id="first">
+        </div>
+        <div class="col ">
+            <label for="exampleFormControlInput1" class="form-label">Enter 2nd number</label>
+            <input type="text" class="form-control" id="second">
+        </div>
+    </div>
+    
+   <!-- <br><br><br> -->
+        <div class="row">
+            <div class="col" >   
+               <button onclick="dosum();">SUM</button>
+               <input type="text" id="txtsum">
+                <!-- <output type="number" id="add"></output> -->
+            </div>
+            <div class="col" >   
+                <button onclick="dosub();">Subtract</button>
+                <input type="text" id="txtsub">
+                 <!-- <output type="number" id="add"></output> -->
+             </div>
+             <div class="col" >   
+                <button onclick="domul();">multiply</button>
+                <input type="text" id="txtmul">
+                 <!-- <output type="number" id="add"></output> -->
+             </div>
+        </div>
+        <div class="clear">
+            <button onclick="clr()">Clear</button>
+        </div>
+</body>
+</html>

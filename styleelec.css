@@ -1,0 +1,60 @@
+body
+{
+    text-align: center;
+    background-color: rgb(233, 255, 248);
+}
+h1
+{
+    color: darkblue;
+     background-color: rgb(216, 185, 246);
+}
+h2
+{
+    color: darkblue;
+     background-color: rgb(216, 185, 246);
+     margin-top:0px;
+     margin-bottom: -12px;
+}
+/* .image
+{
+    transform: scale(0.5);
+    justify-content: center;
+    margin-top: -375px;
+    margin-right: 450px;
+} */
+.container
+{
+    align-items: center;
+    margin-left: 200px;
+}
+.card
+{
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin: 25px;
+   border: solid;
+   border-radius: 5px;
+   background-color: rgb(255, 255, 208);
+}
+.btn
+{
+    color: white;
+   padding: 2px;
+    background-color: blue;
+}
+.card-text
+{
+    color: rgb(145, 145, 145);
+}
+.row {
+   
+     
+    display: flex;
+    flex-direction:row;
+}
+.col {
+    display: flex;
+}

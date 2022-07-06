@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(254, 183, 51);
+}
+h1
+{
+    background-color: brown;
+}
+.input
+{
+    margin-left: 27%;
+    display: flex;
+    flex-direction: row;
+    /* text-align: center; */
+}
+.remove{
+    margin-left: 25%;
+}
+#inputt
+{
+    margin-right: 2%;
+}
+.delete{
+    margin-left: 15%;
+    background-color: black;
+    color: white;
+}
+.inputtt{
+    background-color: rgb(255, 0, 0);
+    font-size: large;
+    border: 0;
+    width: 70%;
+}
+li{
+     background-color: rgb(255, 0, 0); 
+    padding: 15px;
+    margin: 5px;
+    color: black;
+    list-style-type: none;
+   width: 80%;
+    font-size: large;
+    border: initial;
+}

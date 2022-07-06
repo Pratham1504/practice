@@ -1,0 +1,89 @@
+body{
+    text-align: center;
+    background-color: black;
+}
+h1{
+    background-color:white;
+    color:transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(back.webp);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+.container
+{
+    margin-top: 150px;
+    
+    transform: scale(1.5);
+    
+}
+table{
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-radius: 10px;
+}
+.screen
+{
+    background-color: black;
+    border: black;
+    border-bottom: solid white;
+    /* border-radius: 5px; */
+    color: white;
+    font-size: large;
+    text-align: right;
+    outline: 0;
+}
+
+.number
+{
+    color: white;
+    background-color: rgb(190, 190, 155);
+    font-size: 75%;
+    border-radius: 50%;
+}
+.number:hover{
+    background-color: rgb(174, 174, 111);
+}
+.number0
+{
+    color: white;
+    background-color:  rgb(190, 190, 155);
+    font-size: 75%;
+    border-radius: 75px;
+}
+.number0:hover{
+    background-color: rgb(174, 174, 111);
+}
+.sign
+{
+    color: white;
+    background-color: orange;
+    border-radius: 50%;
+    width: 22px;
+    /* font-size: 75%; */
+}
+.sign:hover{
+    background-color: rgb(202, 131, 0);
+}
+.faltu
+{
+    background-color: rgb(250, 250, 227);
+    border-radius: 50%;
+    text-align: center;
+}
+.faltu:hover{
+    background-color: rgb(169, 169, 153);
+}
+.faltu1
+{
+   position: relative;
+   margin-top: 5px;
+   margin-left: -0.1px;
+
+}
