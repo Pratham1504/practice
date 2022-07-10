@@ -1,78 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="todo.css">
-    <title>To-Do-List</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-1.8.2.min.js"></script>
     <script>
-      
-        function fun()
-        {
-            var taskk=document.getElementById("inputt");
-            var show=document.getElementById("tasks");
-            if(taskk.value!="")
-            {
-                    
-                        let li = document.createElement("li");
-                        // li.innerText = taskk.value;
-                        
-                        show.appendChild(li);
-                         let btn=document.createElement("button")
-                        btn.textContent="delete";
-                        btn.className="delete";
-                        
-                        
-                        let input=document.createElement("input");
-                        input.value=taskk.value;
-                        input.className="inputtt";
-                        input.id="inputtt";
-                        li.appendChild(input);
-                        // li.onlclick=fun2(this);
-                        li.appendChild(btn);
-                        // li.click=fun2();
-                        taskk.value="";
-                
-                        btn.addEventListener('click',function(){
-                            show.removeChild(li);
-                            let part=document.getElementById("inputtt");
-                            if(part.value=="")
-                            {
-                                input.addEventListener('onblur',function(){
-                                    show.removeChild(li);
-                                })
-                            }
-                        });
-            }
-                
-
-        }
-        // function fun2(e)
+        // function fun()
         // {
         //     alert();
-        //     var show=document.getElementById("tasks");
-        //     let li=e.target.parentNode;
-        //     show.removeChild(li);
-        // }
+        // 
+        function fun2(c){
+            // if()
+            if($("#o1").html()==$("#o2").html()&&$("#o2").html()==$("#o3").html()&&($("#o1").html()=="X"||($("#o1").html()=="O")))
+            {
+                if(c==0){
+                    alert("O wins");
+                }
+                else{
+                    alert("X wins");
+                }
+                location.reload();
+                j++;
+            }
+            if($("#o1").html()==$("#o5").html()&&$("#o1").html()==$("#o9").html()&&($("#o1").html()=="X"||($("#o1").html()=="O")))
+            {
+                if(c==0){
+                    alert("O wins");
+                }
+                else{
+                    alert("X wins");
+                }
+                location.reload();
+                j++;
+            }
+            if($("#o4").html()==$("#o5").html()&&$("#o4").html()==$("#o6").html()&&($("#o4").html()=="X"||($("#o4").html()=="O")))
+            {
+                if(c==0){
+                    alert("O wins");
+                }
+                else{
+                    alert("X wins");
+                }
+                location.reload();
+                j++;
+            }
+            if($("#o7").html()==$("#o8").html()&&$("#o7").html()==$("#o9").html()&&($("#o7").html()=="X"||($("#o7").html()=="O")))
+            {
+                if(c==0){
+                    alert("O wins");
+                }
+                else{
+                    alert("X wins");
+                }
+                location.reload();
+                j++;
+            }
+            if($("#o5").html()==$("#o3").html()&&$("#o5").html()==$("#o7").html()&&($("#o7").html()=="X"||($("#o7").html()=="O")))
+            {
+                if(c==0){
+                    alert("O wins");
+                }
+                else{
+                    alert("X wins");
+                }
+                location.reload();
+                j++;
+            }
+            if($("#o1").html()==$("#o4").html()&&$("#o1").html()==$("#o7").html()&&($("#o1").html()=="X"||($("#o1").html()=="O")))
+            {
+                if(c==0){
+                    alert("O wins");
+                }
+                else{
+                    alert("X wins");
+                }
+                location.reload();
+                j++;
+            }
+            if($("#o2").html()==$("#o5").html()&&$("#o2").html()==$("#o8").html()&&($("#o2").html()=="X"||($("#o2").html()=="O")))
+            {
+                if(c==0){
+                    alert("O wins");
+                }
+                else{
+                    alert("X wins");
+                }
+                location.reload();
+                j++;
+            }
+            if($("#o6").html()==$("#o9").html()&&$("#o9").html()==$("#o3").html()&&($("#o6").html()=="X"||($("#o6").html()=="O")))
+            {
+                if(c==0){
+                    alert("O wins");
+                }
+                else{
+                    alert("X wins");
+                }
+                j++;
+                location.reload();
+            }
+
+        }
+let c=0,j=0;
+        $(document).ready(function(){
+            $("#o1").click(function(){
+                
+                if(c==0){
+                $("#o1").html("O");
+                fun2(c);
+                c++; j++;
+
+                $("#o1").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+                else {
+                    $("#o1").html("X");
+                    $("#o1").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                    fun2(c);
+                    c--; j++;
+                    
+                }
+
+            })
+            
+            $("#o2").click(function(){
+                
+                if(c==0){
+                $("#o2").html("O");
+                fun2(c);
+                c++; j++; 
+
+                $("#o2").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+                else if(c>0){
+                    $("#o2").html("X");
+                    fun2(c);
+                    c--; j++; 
+                    $("#o2").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+
+            })
+            
+            $("#o3").click(function(){
+                
+                if(c==0){
+                $("#o3").html("O");
+                fun2(c);
+                c++; j++;
+
+                $("#o3").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+                else if(c>0){
+                    $("#o3").html("X");
+                    fun2(c);
+                    c--; j++;
+                    $("#o3").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+
+            })
+            
+            $("#o4").click(function(){
+                
+                if(c==0){
+                $("#o4").html("O");
+                fun2(c);
+                c++; j++;
+
+                $("#o4").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+                else if(c>0){
+                    $("#o4").html("X");
+                    fun2(c);
+                    c--; j++;
+                    $("#o4").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+
+            })
+           
+            $("#o5").click(function(){
+                
+                if(c==0){
+                $("#o5").html("O");
+                fun2(c);
+                c++; j++;
+
+                $("#o5").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+                else if(c>0){
+                    $("#o5").html("X");
+                    fun2(c);
+                    c--; j++;
+                    $("#o5").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+
+            })
+            
+            $("#o6").click(function(){
+                
+                if(c==0){
+                $("#o6").html("O");
+                fun2(c);
+                c++; j++;
+
+                $("#o6").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+                else if(c>0){
+                    $("#o6").html("X");
+                    fun2(c);
+                    c--; j++;
+                    $("#o6").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+
+            })
+          
+            $("#o7").click(function(){
+                
+                if(c==0){
+                $("#o7").html("O");
+                fun2(c);
+                c++; j++;
+
+                $("#o7").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+                else if(c>0){
+                    $("#o7").html("X");
+                    fun2(c);
+                    c--; j++;
+                    
+                    $("#o7").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+
+            })
+           
+            $("#o8").click(function(){
+                
+                if(c==0){
+                $("#o8").html("O");
+                fun2(c);
+                c++; j++;
+
+                $("#o8").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+                else if(c>0){
+                    $("#o8").html("X");
+                    fun2(c);
+                    c--; j++;
+                    $("#o8").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+
+            })
+            
+            $("#o9").click(function(){
+                
+                if(c==0){
+                $("#o9").html("O");
+                fun2(c);
+                c++; j++;
+
+                $("#o9").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+                }
+                else if(c>0){
+                    $("#o9").html("X");
+                    fun2(c);
+                    c--; j++;
+                    $("#o9").unbind();     if(j==9){
+            alert("TIED");
+            location.reload();
+        }
+
+                }
+
+            })
+        
+
+        });
+        
+
+
+        // blur
+        // bind
+        // unbind
+        // prop 
+        // attr
+        // 
+
+
+
+
+        /////==============eh h jquery
+
+        ////=====fromt end te backemnd nu apa seperate krta
+        /////////////front end bnaaa bss tu hunn
+        ///////id dinda ja hAr cheez nu
+        ///
     </script>
+    <title>TIC-TAC-TOE</title>
 </head>
-<body>
+<body style="background-color:antiquewhite;">
+ 
     <center>
-            <h1>TO-DO-LIST</h1>
-            <!-- <q>-Pratham goyal</q> -->
-            <div class="input row">
-                <input type="text" style="width: 60%; height: 30px; font-size: large;" id="inputt">
-                <button onclick="fun()" style="background-color: brown;">Add Task</button>
-            </div>
-                <br><br><br>
-                <div class="task">
-                    <h1>TASKS</h1>
-                    <ul id="tasks" >
-                        <!-- <li>
-                            <input type="text" class="form-control list_item">
-                            <button class="btn">Edit</button>
-                            <button class="btn">Delete</button>
-                        </li> -->
-                    </ul>
-                </div>
-    </center>
+        <h1 style="background-color: yellow;">TIC-TAC-TOE</h1>
+<table style="transform: scale(4); margin-top: 200px;">
+    <tr>
+        <td id="o1" style="border: solid;" ></td>
+        <td id="o2" style="border: solid;"></td>
+        <td id="o3" style="border: solid;">&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="o4" style="border: solid;"></td>
+        <td id="o5" style="border: solid;">&nbsp;&nbsp;&nbsp;</td>
+        <td id="o6" style="border: solid;"></td>
+    </tr>
+    <tr>
+        <td id="o7" style="border: solid;">&nbsp;&nbsp;&nbsp;</td>
+        <td id="o8" style="border: solid;"></td>
+        <td id="o9" style="border: solid;"></td>
+    </tr>
+</table>
+</center>
+
+    <!-- <input type="text" id="idd"  value="Pratham Goyal" placeholder="hint"> -->
 </body>
 </html>
